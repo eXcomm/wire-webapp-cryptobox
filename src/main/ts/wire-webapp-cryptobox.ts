@@ -625,3 +625,22 @@ export class Cryptobox {
     });
   }
 }
+
+export class WireCryptobox extends Cryptobox {
+  public generate_signaling_keys(): Promise<JSON> {
+    return new Promise(function (resolve) {
+      /*
+      var random_bytes = new Uint8Array(sodium.crypto_auth_hmacsha256_KEYBYTES);
+      getRandomValues(random_bytes);
+      var hmac = sodium.crypto_auth_hmacsha256(random_bytes, sodium.crypto_hash_sha256('salt'));
+      var encryption_key = sodium.to_base64(hmac);
+      var mac_key = sodium.to_base64(hmac);
+      var signaling_keys = {
+        enckey: encryption_key,
+        mackey: mac_key
+      };
+      resolve(signaling_keys);
+      */
+    });
+  }
+}
